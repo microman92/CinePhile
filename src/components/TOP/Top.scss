@@ -1,0 +1,65 @@
+.main__top {
+    background: #fff;
+    padding   : 30px 0 90px 0;
+
+    &_title {
+        color      : #141414;
+        font-family: 'Montserrat';
+        font-size  : 30px;
+        font-style : italic;
+        font-weight: 700;
+        line-height: 30px;
+        display    : flex;
+        gap        : 15px;
+        margin     : 0 0 90px 100px;
+
+        & span {
+            color      : #149A03;
+            font-family: 'Montserrat Alternates';
+            font-size  : 50px;
+            font-style : normal;
+            font-weight: 700;
+            line-height: 30px;
+        }
+    }
+    
+    &_item { 
+        border-radius: 10px;
+        background   : #141414;
+        box-shadow   : 0px 20px 15px -10px rgba(0, 0, 0, 0.25);
+        height       : 463px !important;
+        position     : relative;
+        overflow     : hidden;
+
+        &-img {
+            position  : absolute;
+            top       : 0;
+            right     : 0;
+            width     : 70%;
+            height    : 100%;
+            object-fit: cover;
+            z-index   : -5;
+        }
+
+        &-info {
+            height    : 100%;
+            background: linear-gradient(90deg, #141414 40%, rgba(20, 20, 20, 0.00) 100%);
+
+            & span {
+                color          : #FFF;
+                font-family    : 'Montserrat';
+                font-size      : 150px;
+                font-style     : italic;
+                font-weight    : 700;
+                line-height    : normal;
+                height         : 100%;
+                width          : 30%;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+            }
+
+        }
+    }
+
+}

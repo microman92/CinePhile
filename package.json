@@ -1,0 +1,28 @@
+{
+  "name": "cinephille",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
+    "pinia": "^2.0.36",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.1",
+    "swiper": "^9.4.1",
+    "vue": "^3.3.2",
+    "vue-lazyload": "^3.0.0",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "gh-pages": "^6.1.1",
+    "vite": "^4.3.5"
+  }
+}

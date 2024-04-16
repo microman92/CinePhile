@@ -1,0 +1,121 @@
+.main__info {
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    margin-top: 30px;
+    background: linear-gradient(90deg, black 40%, rgba(20, 20, 20, 0.00) 100%);
+
+    @include media(992) {
+        background: rgba(20, 20, 20, 0.5)
+    }
+
+    &.active {
+        height: 700px;
+
+        @include media(375) {
+            padding: 50px 0;
+            height: auto;
+        }
+    }
+
+    &_close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        border-radius: 50%;
+        background: rgba(20, 20, 20, 0.70);
+        color: white;
+        padding: 20px;
+        z-index: 30;
+        cursor: pointer;
+
+        @include media(375) {
+            top: 15px;
+            right: 10px;
+            padding: 10px;
+        }
+    }
+
+    &_right {
+        &-img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 60%;
+            object-fit: cover;
+            z-index: -1;
+
+            @include media(992) {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &_block {
+        height: 100%;
+    }
+
+    &_left {
+        max-width: 935px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+        justify-content: center;
+        padding-left: 50px;
+        position: relative;
+        z-index: 20;
+
+        @include media(992) {
+            max-width: 100%;
+            align-items: center;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include media(375) {
+            gap: 20px;
+        }
+
+        &-title {
+            color: #FFF;
+            font-size: 50px;
+            font-weight: 700;
+
+            @include media(375) {
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            -webkit-line-clamp: 4;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        &-desc {
+            color: rgba(255, 255, 255, 0.60);
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            display: flex;
+            gap: 10px;
+
+            @include media(576) {
+                gap: 5px;
+                flex-direction: column;
+            }
+        }
+    }
+}

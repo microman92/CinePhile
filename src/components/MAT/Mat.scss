@@ -1,0 +1,113 @@
+.main__video {
+    padding-bottom: 51px;
+
+    &_title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #FFF;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 43px 0 43px 100px;
+        width: max-content;
+
+        @include media(992) {
+            margin: 43px 0 43px 20px;
+        }
+    }
+
+    &_item {
+        height: 462px !important;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid black;
+        position: relative;
+
+        &-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.40);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.4s;
+        }
+
+        &:hover::after {
+            background: transparent;
+        }
+
+        &:hover &-bg {
+            transform: scale(1.1);
+        }
+
+        &-route {
+            font-size: 35px;
+            line-height: 150%;
+            color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 15;
+        }
+
+
+
+        &-title {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            text-align: center;
+
+        }
+    }
+}
+
+.swiper {
+    padding: 0 100px !important;
+
+    @include media(992) {
+        padding: 0 40px 0 20px !important;
+    }
+
+    @include media(768) {
+        padding: 0 10px 0 10px !important;
+    }
+
+
+    &-button-prev,
+    &-button-next {
+        color: white !important;
+
+        @include media(992) {
+            display: none !important;
+        }
+
+        &.swiper-button-disabled {
+            display: none;
+        }
+
+
+        &::after {
+            font-size: 24px !important;
+            font-weight: 700;
+        }
+    }
+}
