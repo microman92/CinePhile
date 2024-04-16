@@ -1,0 +1,1 @@
+import{_ as e}from"./Media-548f97b0.js";import{o as a,c as t,a as o}from"./index-f19e1d78.js";const s={class:"main"},p={__name:"Tv",setup(c){return(_,r)=>(a(),t("main",s,[o(e,{type:"tv"})]))}};export{p as default};
